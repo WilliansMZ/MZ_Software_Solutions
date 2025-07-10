@@ -1,6 +1,23 @@
+import ContactForm from "@/components/ContactForm";
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 export default function Home() {
   return (
     <>
+    <header className="fixed top-0 left-0 w-full bg-gray-950 border-b border-gray-800 z-50">
+  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 className="text-xl font-bold text-white">
+      MZ<span className="text-blue-500">Software</span>
+    </h1>
+    <nav className="space-x-4 text-gray-300 text-sm sm:text-base">
+      <a href="#servicios" className="hover:text-white transition">Servicios</a>
+      <a href="#contacto" className="hover:text-white transition">Contacto</a>
+      <a href="#footer" className="hover:text-white transition">Redes</a>
+    </nav>
+  </div>
+</header>
+
+
+
       {/* HERO */}
       <main className="flex min-h-screen flex-col items-center justify-center bg-gray-950 text-white px-6 py-20">
         <section className="text-center max-w-2xl">
@@ -53,45 +70,7 @@ export default function Home() {
       <section id="contacto" className="bg-gray-950 text-white py-16 px-6 w-full">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Contáctanos</h2>
-          <form
-            action="https://formspree.io/f/mkgbdwzw"
-            method="POST"
-            className="space-y-6"
-          >
-            <div>
-              <label className="block mb-1">Nombre</label>
-              <input
-                type="text"
-                name="nombre"
-                required
-                className="w-full p-3 rounded-md bg-gray-800 border border-gray-700"
-              />
-            </div>
-            <div>
-              <label className="block mb-1">Correo</label>
-              <input
-                type="email"
-                name="correo"
-                required
-                className="w-full p-3 rounded-md bg-gray-800 border border-gray-700"
-              />
-            </div>
-            <div>
-              <label className="block mb-1">Mensaje</label>
-              <textarea
-                name="mensaje"
-                required
-                rows={5}
-                className="w-full p-3 rounded-md bg-gray-800 border border-gray-700"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 rounded-md font-semibold"
-            >
-              Enviar Mensaje
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </section>
 
@@ -101,12 +80,12 @@ export default function Home() {
           <p className="text-sm">
             © 2025 MZ Software Solutions. Todos los derechos reservados.
           </p>
-          <div className="flex space-x-4">
-            <a href="https://github.com/tuusuario" className="hover:text-white" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/tuusuario" className="hover:text-white" target="_blank">LinkedIn</a>
-            <a href="https://wa.me/519XXXXXXXX" className="hover:text-white" target="_blank">WhatsApp</a>
-            <a href="mailto:tuemail@ejemplo.com" className="hover:text-white">Email</a>
-          </div>
+          <div className="flex space-x-4 text-xl">
+  <a href="https://github.com/WilliansMZ" className="hover:text-white" target="_blank"><FaGithub /></a>
+  <a href="https://linkedin.com/in/williansmz" className="hover:text-white" target="_blank"><FaLinkedin /></a>
+  <a href="https://wa.me/519XXXXXXXX" className="hover:text-white" target="_blank"><FaWhatsapp /></a>
+  <a href="mailto:malquezuritawillians@gmail.com" className="hover:text-white"><FaEnvelope /></a>
+</div>
         </div>
       </footer>
     </>

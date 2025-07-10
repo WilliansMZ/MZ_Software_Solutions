@@ -15,8 +15,20 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MZ Software Solutions",
   description: "Landing page oficial de MZ Software Solutions",
-  icons: {
-    icon: "/favicon.ico",
+  openGraph: {
+    title: "MZ Software Solutions",
+    description: "Transformamos ideas en soluciones digitales seguras y escalables.",
+    url: "https://tu-dominio.vercel.app",
+    siteName: "MZ Software Solutions",
+    images: [
+      {
+        url: "/og-image.jpg", // súbelo a /public
+        width: 1200,
+        height: 630,
+        alt: "Banner de MZ Software Solutions",
+      },
+    ],
+    type: "website",
   },
 };
 
